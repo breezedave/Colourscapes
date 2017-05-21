@@ -1,0 +1,26 @@
+@html.extend('layout',function(model){
+
+	@html.block('content',function(model){
+        <div class="videoHold">
+            <video id="video" class="video" muted>
+                <source src="video/DoctorStrange.mp4" type="video/mp4">
+            </video>
+        </div>
+
+		<canvas></canvas>
+
+		<div class="controls">
+			<button class="prev">&lt;</button>
+			<input class="frame" value="1"/>
+			<button class="next">&gt;</button>
+		</div>
+
+		<div>
+			<button onclick="generateFrameColors(generateFrameColors)">Start</button>
+			<button onclick="getDroppedFrames()">CleanUp</button>
+		</div>
+		<!--<p>ffmpeg -start_number 26 -framerate 24 -i img%02d.png -qscale:v 0 out.avi</p>-->
+        <script type="text/javascript" src="javascripts/getImgs.js"></script>
+        <script type="text/javascript" src="javascripts/functionality.js"></script>
+    })
+})

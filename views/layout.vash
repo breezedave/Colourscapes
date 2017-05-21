@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <title>@model.title</title>
+</head>
+<body>
+    <p>@html.block('content')</p>
+</body>
+</html>
